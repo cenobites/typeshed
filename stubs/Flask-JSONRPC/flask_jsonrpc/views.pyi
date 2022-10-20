@@ -6,7 +6,7 @@ from .site import JSONRPCSite
 MethodView: TypeAlias = Any
 ResponseReturnValue: TypeAlias = Any
 
-class JSONRPCView(MethodView):
+class JSONRPCView:
     jsonrpc_site: JSONRPCSite
     def __init__(self, jsonrpc_site: JSONRPCSite) -> None: ...
     def post(self) -> ResponseReturnValue: ...
